@@ -1,9 +1,9 @@
 
 
 body {
-    font-family: 'Roboto', sans-serif;
-    color: #434455;
-    background-color:#FFFFFF
+ font-family: 'Roboto', sans-serif;
+ color: #434455;
+ background-color:#FFFFFF
 }
 p,h1,h2,h3,h4 {
   margin-top: 0;
@@ -31,10 +31,13 @@ img {
 }
 
 .container {
-  max-width: 320px;
+  /* max-width: 320px;
   margin: 0px auto;
   padding-left: 16px;
-  padding-right: 16px;
+  padding-right: 16px; */
+  /* max-width: 352px; */
+  padding: 0 16px;
+
 } 
 
 .visually-hidden {
@@ -50,11 +53,24 @@ img {
   overflow: hidden;
 }
 
+.link {
+  text-decoration: none;
+}
 
+.list {
+  list-style-type: none;
+}
 
-
+/*==============================================header320================================================*/
+@media screen and (min-width: 480px) {
+  .container {
+    width: 352px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .header {
-  padding:24px 0;
+  /* padding:24px 0; */
   border-bottom: 1px solid var(--CORNFLOWER, #E7E9FC);
   background: var(--WHITE, #FFF);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -63,12 +79,15 @@ img {
 .header-container {
   display: flex;
   align-items: center;
+
+
+  justify-content: space-between;
 }
 
 .header-navigation {
   display: flex;
   align-items: center;
- margin-right: auto;
+ /* margin-right: auto; */
 }
 
 .header-logo {
@@ -79,9 +98,9 @@ img {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  margin-right: 76px;
+  margin-right: 76px; */
 }
 
 .header-logo-studio {
@@ -95,13 +114,16 @@ img {
 }
 
 .header-menu-list {
-  display: flex;
+  /* display: flex; */
+  display: none;
   gap: 40px;
 }
 
 .header-menu-item {}
 
 .header-menu-link {
+  display: block;
+
   color: #2E2F42;
   font-size: 16px;
   font-weight: 500;
@@ -133,6 +155,7 @@ img {
 }
 .header-contacts {
   font-style: normal;
+  display: none;
 }
    
 .header-list{
@@ -157,9 +180,99 @@ img {
   color: #404bbf
 }
 
+.open-menu-header-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 16px 0px 16px 0px;
+  background-color: inherit;
+  border: none;
+}
+.icon-header-menu {
+  fill: #2f2f37;
+}
 
+.close-menu-header-btn {
+  background-color: #e7e9fc;
+}
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 1;
+  padding: 24px 24px 40px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: auto;
+}
 
+.mobile-menu .modal-btn {
+  background-color: rgb(231, 233, 252, 0.1);
+}
 
+.mobile-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.mobile-menu-link {
+  color: #2e2f42;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+
+.menu-contact-link {
+  color: #434455;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  font-style: normal;
+}
+
+.mobile-menu-address {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mobile-menu-list li:first-child>a {
+  color: #404bbf;
+}
+
+.mobile-menu-address li:first-child>a {
+  color: #4d5ae5;
+}
+
+.menu-contact-link:active {
+  color: #4d5ae5;
+}
+
+.mobile-menu-link:active {
+  color: #404bbf;
+}
+
+.mobile-menu .social-list {
+  margin-top: 48px;
+  gap: 40px;
+}
+
+/*==============================================solutions320================================================*/
 
 .solutions {
   background: #2E2F42;
@@ -167,11 +280,11 @@ img {
     rgba(46, 47, 66, 0.7),
     rgba(46, 47, 66, 0.7)),
     url(../images/hero.jpg);
-  max-width: 1440px;
+  max-width: 320px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding:188px 0;
+  padding: 72px 0;
   margin: 0 auto;
 }
 
@@ -191,6 +304,7 @@ img {
 }
 
 .solutions-button {
+  display: block;
   color: white;
   background-color: #4D5AE5;
   font-size: 16px;
@@ -203,7 +317,6 @@ img {
   border-radius: 4px;
   border: none;
  margin: 0 auto;
- display: block;
  min-width: 169px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
@@ -214,9 +327,31 @@ img {
 background-color: #404bbf;
 }
 
+/* @media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+  .solutions {
+      background: #2E2F42;
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)),
+        url(../images/hero.jpg);
+}
+} */
 
-/*==============================================Featuters================================================*/
+/*==============================================featuters320================================================*/
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 
 .featuters {
@@ -235,6 +370,7 @@ background-color: #404bbf;
 }
 .featuters-item {
   /* width: calc((100%-72px)/4); */
+  flex-basis: 100%;
 }
 
 .featuters-subtitle {
@@ -287,6 +423,7 @@ background-color: #404bbf;
 
 .container-team-item{
   padding: 32px 0;
+
 }
 
 .team-title {
@@ -304,7 +441,7 @@ background-color: #404bbf;
 .team-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 72px 24px;
 }
 
 .team-item {
@@ -371,7 +508,7 @@ background-color: #404bbf;
 }
 
 
-/*==============================================Portfolio================================================*/  
+/*==============================================portfolio320================================================*/  
 
 
 .portfolio {
@@ -402,9 +539,10 @@ background-color: #404bbf;
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 48px;
-  overflow: hidden;
+  gap: 48px 24px;
+  /* column-gap: 24px;
+  row-gap: 48px; */
+  /* overflow: hidden; */
 }
 
 .portfolio-item {

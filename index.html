@@ -15,31 +15,106 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <!-- <header class="header">
+    <header class="header">
         <div class="container header-container">
             <nav class="header-navigation">
-                <a href="./index.html" class="header-logo">Web<span class="header-logo-studio">Studio</span></a>
-                <ul class="header-menu-list">
-                    <li class="header-menu-item"><a class="header-menu-link active" href="./index.html">Studio</a></li>
-                    <li class="header-menu-item"><a class="header-menu-link" href="">Portfolio</a></li>
-                    <li class="header-menu-item"><a class="header-menu-link" href="">Contacts</a></li>
+                <a href="./index.html" class=" header-logo link">Web<span class="header-logo-studio">Studio</span></a>
+                <ul class="list header-menu-list">
+                    <li class="header-menu-item"><a class="link header-menu-link active" href="./index.html">Studio</a></li>
+                    <li class="header-menu-item"><a class="link header-menu-link" href="">Portfolio</a></li>
+                    <li class="header-menu-item"><a class="link header-menu-link" href="">Contacts</a></li>
                 </ul>
             </nav>
+            <button type="button" class="open-menu-header-btn">
+                <svg width="24" height="24" class="icon-header-menu">
+                    <use href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
          <address class="header-contacts">
-                <ul class="header-list">
+                <ul class="list header-list">
                     <li class="header-contacts-item">
-                        <a class ="header-contacts-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        <a class ="link header-contacts-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
                     </li>
                     <li class="header-contacts-item">
-                        <a class ="header-contacts-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+                        <a class ="link header-contacts-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
                     </li>
                 </ul>
             </address>
         </div>
-    </header> -->
+        <div class="mobile-menu">
+            <div>
+                <button type="button" class="modal-btn">
+                    <svg width="8" height="8" class="modal-btn-icon">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <ul class="list mobile-menu-list">
+                    <li class="mobile-menu-item">
+                        <a href="./index.html" class="link mobile-menu-link">Studio</a>
+                    </li>
+                    <li class="mobile-menu-item">
+                        <a href="" class="link mobile-menu-link">Portfolio</a>
+                    </li>
+                    <li class="mobile-menu-item">
+                        <a href="" class="link mobile-menu-link">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <address class="mobile-menu-address">
+                    <ul class="list mobile-menu-address">
+                        <li class="mobile-menu-address-item">
+                            <a href="mailto:info@devstudio.com" class="link menu-contact-link">
+                                info@devstudio.com
+                            </a>
+                        </li>
+                        <li class="mobile-menu-address-item">
+                            <a href="tel:+110001111111" class="link menu-contact-link">
+                                +11 (000) 111-11-11
+                            </a>
+                        </li>
+                    </ul>
+                </address>
+                <ul class="social-list">
+                    <li class="social-item">
+                        <a class="footer-svg-link" href="#">
+                            <svg class="footer-svg" width="24" height="24">
+                                <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                                <use href="./images/icons#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a class="footer-svg-link" href="#">
+                            <svg class="footer-svg" width="24" height="24">
+                                <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                                <use href="./images/icons#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a class="footer-svg-link" href="#">
+                            <svg class="footer-svg" width="24" height="24">
+                                <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                                <use href="./images/icons#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a class="footer-svg-link" href="#">
+                            <svg class="footer-svg" width="24" height="24">
+                                <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                                <use href="./images/icons#icon-linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
 
    <main>
-        <!-- <section class="solutions">
+        <section class="solutions">
             <div class="container solutions-container">
                 <h1 class="solutions-title">
                     Effective Solutions
@@ -47,7 +122,7 @@
                 </h1>
                 <button type="button" class="solutions-button">Order Service</button>
             </div>
-        </section> -->
+        </section>
         <section class="featuters">
             <div class="container featuters-container">
                 <h2  class="visually-hidden">Featuters</h2>
